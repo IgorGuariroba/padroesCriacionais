@@ -1,13 +1,15 @@
 <?php
 
-namespace Alura\DesignPattern;
+namespace Alura\DesignPattern\Pedido;
 
-class DadosExtrinsecosPedido
+use DateTimeInterface;
+
+class TemplatePedido
 {
     private string $nomeCliente;
-    private \DateTimeInterface $dataFinalizacao;
+    private DateTimeInterface $dataFinalizacao;
 
-    public function __construct(string  $nomeCliente, \DateTimeInterface $dataFinalizacao)
+    public function __construct(string  $nomeCliente, DateTimeInterface $dataFinalizacao)
     {
         $this->nomeCliente = $nomeCliente;
         $this->dataFinalizacao = $dataFinalizacao;
@@ -18,7 +20,7 @@ class DadosExtrinsecosPedido
         return $this->nomeCliente;
     }
 
-    public function dataFinalizacao(): \DateTimeInterface
+    public function dataFinalizacao(): DateTimeInterface
     {
         return $this->dataFinalizacao;
     }
